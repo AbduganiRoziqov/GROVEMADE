@@ -1,0 +1,132 @@
+.container{
+   
+    .nav{
+        //  background: grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        #check{
+            display: none;
+        }
+        .open{
+            display: none;
+            font-size: 22px;
+            color: #000;
+        }
+        .close{
+            display: none;
+            font-size: 22px;
+            color: #000;
+        }
+        .close1{
+            display: none;
+        }
+        &__list{
+            display: flex;
+            gap: 20px;
+            padding: 10px 0;
+            li{
+                a{
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: 1.4px;
+                    text-transform: uppercase;
+                    &:hover{
+                        color: blue;
+                        font-weight: 700;
+                        border-bottom: 2px solid #000;
+                    }
+                }
+            }
+
+        }
+        
+        .mycard{
+            p{
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 16px;
+                text-align: right;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 10px 0;
+            }
+        }
+    }
+
+
+
+
+  
+}
+
+
+
+  @media (max-width:776px) {
+.header{
+        .container{
+    .nav{
+        // background: red;
+        &__list{
+            z-index: 1;
+            position: fixed;
+            top: 30px;
+            left: -100%;
+            width: 20%;
+            height: 80vh;
+            background-color: grey;
+            justify-content: center;
+             flex-direction: column;
+            transition: 1s;
+            align-items: center;
+            color: #fff;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 20px;
+        }
+        .open{
+            display: block;
+        }
+        // .close{
+        //     display: block;
+        // }
+     
+        
+        .mycard{
+            display: block;
+        }
+           
+
+        #check:checked+.nav__list{
+            left: 0;
+        }
+        #check:checked~.open{
+            display: none;
+        }
+        #check:checked~.close{
+            display: block;
+        }
+        
+      
+
+      
+        
+    }
+}
+}
+}
+  @media (max-width:412px) {
+.header{
+        .container{
+    .nav{
+        .mycard{
+            display: none;
+        }
+        
+    }
+}
+}
+}

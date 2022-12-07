@@ -1,0 +1,46 @@
+.header{
+     .showcase{
+        height:100vh;
+        background-image: url(../media/showcase.svg);
+        // background-position: center;
+        background-repeat: no-repeat;
+        // background-size: 100% 100%;
+        &__text{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            // justify-content: center;
+            color: #fff;
+            padding-top: 180px;
+            h2{
+                font-weight: 700;
+                word-spacing: 20px;
+                font-size: 30px;
+                color: #fff;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+            }
+            a{
+                font-weight: 400;
+            }
+        }
+
+    }
+}
+
+  @media (max-width:412px) {
+.header{
+    .showcase{
+        &__text{
+            h2{
+                font-weight: 400;
+                word-spacing: 10px;
+                text-align: center;
+            }
+        }
+    }
+}
+}
